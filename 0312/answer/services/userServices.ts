@@ -6,7 +6,6 @@ async function getAll(): Promise<User[]> {
         throw new Error('network')
     }
     const data: UsersAPIResponse = await res.json()
-
     return data.data.map(item => mapping(item))
 }
 
